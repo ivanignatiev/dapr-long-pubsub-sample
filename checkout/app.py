@@ -4,7 +4,7 @@ import time
 import logging
 import uuid
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 with DaprClient() as client:
     # for i in range(1, 10):

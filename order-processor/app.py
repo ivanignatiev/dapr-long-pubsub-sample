@@ -3,6 +3,9 @@ from cloudevents.http import from_http
 import json
 import os
 import time
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 
@@ -28,7 +31,7 @@ def orders_subscriber():
 
     steps = 0
 
-    while steps < 100:
+    while steps < 200:
         print('Order %s processing step: %s' % (event.data['orderId'], steps), flush=True)
         steps = steps + 1
         time.sleep(1)

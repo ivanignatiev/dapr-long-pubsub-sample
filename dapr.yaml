@@ -5,7 +5,11 @@ apps:
   - appID: order-processor-sdk
     appDirPath: ./order-processor/
     appPort: 6001
+    logLevel: debug
+    enableApiLogging: true
     command: ["uvicorn", "app:app"]
   - appID: checkout-sdk
     appDirPath: ./checkout/
+    logLevel: debug
+    enableApiLogging: true
     command: ["python3", "app.py"]
